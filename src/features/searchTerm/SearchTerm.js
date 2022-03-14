@@ -1,6 +1,7 @@
 import React from "react";
 import {selectSearchTerm, updateSearchTerm, clearSearchTerm} from './searchTermSlice'
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 export const SearchTerm=()=>{
     const searchTerm=useSelector(selectSearchTerm)
@@ -14,13 +15,16 @@ export const SearchTerm=()=>{
         dispatch(clearSearchTerm())
         //e.target.value=''
         //e.preventDefault()
+
         
     }
+
     return (
-        <section>
-            <input type='text' onChange={handleUpdateSearchTerm} value={searchTerm}/>
+        <>
+            <input type='text' placeholder="filter" onChange={handleUpdateSearchTerm} value={searchTerm}
+           />
             <button onClick={handleClearSearchTerm}>clear</button>
-        </section>
+        </>
     
     )
 }

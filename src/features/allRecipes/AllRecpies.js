@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {selectSearchTerm} from '../searchTerm/searchTermSlice'
 import { addRecipe, removeRecipe } from '../favoriteRecipes/favoriteRecipesSlice';
 import { selectFavoriteRecipes } from '../favoriteRecipes/favoriteRecipesSlice';
+import {Link} from 'react-router-dom'
 
 export const AllRecipes=()=>{
     const allRecipes=useSelector(selectAllRecipes)
@@ -22,7 +23,7 @@ export const AllRecipes=()=>{
         <section>
             {filterRecipe(allRecipes,searchTerm).map(recipe=>(
                 <section key={recipe.id}>
-                    <p>{recipe.id}, {recipe.name}</p>
+                    <p>{recipe.id}: {recipe.name}</p>
                     {favoriteRecipes.includes(recipe.id)?
                     <button onClick={()=>handleRemoveRecipe(recipe.id)}>
                         Remove from Favorite
