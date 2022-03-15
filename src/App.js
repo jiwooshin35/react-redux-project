@@ -5,6 +5,7 @@ import {FavoriteRecipes} from './features/favoriteRecipes/FavoriteRecipes'
 import { TopBar } from './features/topBar/TopBar';
 import {BrowserRouter as Router, Route, useParams} from 'react-router-dom'
 import {LabeledRecipes} from './features/labeledRecipes/LabeledRecipes'
+import { Twt } from './features/twt/twt';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/:label'>
         <LabeledRecipes/>
       </Route>
+      <Twt/>
     </Router>
   );
 }

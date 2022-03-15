@@ -8,9 +8,6 @@ import { YelpSearch } from "../yelpSearch/YelpSearch";
 
 export const TopBar=()=>{
 
-
-   
-
     return(
         <nav>
             this is top bar by nav element 

@@ -4,6 +4,7 @@ import allRecipesReducer from '../features/allRecipes/allRecipesSlice'
 import favoriteRecipesReducer from '../features/favoriteRecipes/favoriteRecipesSlice';
 import labelsReducer from '../features/labels/labelsSlice';
 import yelpSearchReducer from '../features/yelpSearch/yelpSearchSlice'
+import twtReducer from '../features/twt/twtSlice'
 
 export default configureStore({
   reducer: {
@@ -11,7 +12,8 @@ export default configureStore({
     allRecipes: allRecipesReducer,
     favoriteRecipes: favoriteRecipesReducer,
     labels: labelsReducer,
-    yelpSearch: yelpSearchReducer
+    yelpSearch: yelpSearchReducer,
+    twt: twtReducer,
 
   },
 });
